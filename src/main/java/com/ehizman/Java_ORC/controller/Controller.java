@@ -7,10 +7,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.util.MultiValueMap;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -68,5 +65,10 @@ public class Controller {
                         new PhoneNumber(receiverPhoneNumber),
                         new PhoneNumber(senderPhoneNumber), messageToSend)
                 .create();
+    }
+
+    @PostMapping("/status")
+    public void logTwilioResponses(@RequestBody String twilioLog){
+        log.info("Logs form Twilio --> {}", twilioLog);
     }
 }
