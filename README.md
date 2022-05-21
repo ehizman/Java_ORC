@@ -9,6 +9,11 @@ To run the application:
 4. Start your ngrok agent by running `ngrok http 8080` in your terminal.
 5. Clone the project on your favourite Integrated Development Environment (IDE).
 6. Install dependencies by running the following command: `mvn install`.
-7. Run the project on your IDE or run the following command on your terminal: `java -jar ./target/customer-service.jar`. You must have either the Java Runtime Environment (JRE) or the Java Development Kit (JDK) installed on your machine.
+7. Run the project on your IDE or run the following command on your terminal: 
+
+`java -jar ./target/customer-service.jar`
+
+You must have either the Java Runtime Environment (JRE) or the Java Development Kit (JDK) installed on your machine.
+
 Click [here](https://www.oracle.com/java/technologies/downloads/) to find a JRE or JDK version that suits your machine.
 
