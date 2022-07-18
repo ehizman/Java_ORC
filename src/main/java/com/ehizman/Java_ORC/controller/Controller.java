@@ -58,10 +58,10 @@ public class Controller {
     }
 
     //This method sends a message back to the user
-    private void sendMessage(String messageToSend, String receiverPhoneNumber, String senderPhoneNumber) {
+    private void sendMessage(String messageToSend, String senderPhoneNumber, String receiverPhoneNumber) {
         Message.creator(
-                        new PhoneNumber(receiverPhoneNumber),
-                        new PhoneNumber(senderPhoneNumber), messageToSend)
+                        new PhoneNumber(senderPhoneNumber),
+                        new PhoneNumber(receiverPhoneNumber), messageToSend)
                 .create();
     }
 
