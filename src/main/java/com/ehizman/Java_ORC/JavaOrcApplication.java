@@ -18,11 +18,5 @@ public class JavaOrcApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(JavaOrcApplication.class, args);
 		Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
-		Message message = Message.creator(
-						new PhoneNumber("whatsapp:+2348028887080"),
-						new PhoneNumber("whatsapp:+14155238886"),
-						"Hello there!\nWelcome to Likee!! by Ehizman\nPlease send in your location, then send a picture of the item that you want to track")
-				.create();
-
 	}
 }
